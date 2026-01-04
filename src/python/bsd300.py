@@ -157,3 +157,26 @@ from llm_prompt import build_llm_prompt
 
 prompt = build_llm_prompt(diagnostics)
 print(prompt)
+
+
+#PHASE 3C
+from llm_decision import query_llm
+
+decision = query_llm(prompt)
+print("LLM decision:", decision)
+
+#PHASE 3D
+from apply_llm_decision import apply_decision
+
+x_llm = apply_decision(
+    decision,
+    A,
+    y.flatten(),
+    U=U,
+    S=S,
+    Vt=Vt
+)
+plt.figure()
+plt.imshow(x_llm.reshape(PATCH_SIZE, PATCH_SIZE), cmap='gray')
+plt.title("LLM-guided reconstruction")
+plt.show()
