@@ -1,4 +1,4 @@
-# LLM-Guided Regularization of Pseudoinverse for Ill-Posed Signal Reconstruction
+ LLM-Guided Regularization of Pseudoinverse for Ill-Posed Signal Reconstruction
 
 ## 📌 Project Motivation
 
