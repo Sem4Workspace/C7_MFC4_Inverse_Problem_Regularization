@@ -312,17 +312,6 @@ The complete workflow of the project is illustrated below.
        └── PSNR
 ---
 
-# Reconstruction Results
-
-## Signal Reconstruction Example
-![alt text](image-1.png)
-
-## Image Reconstruction Example
-
-![alt text](image-2.png)
-
-These results show how regularization significantly improves reconstruction quality compared to naive pseudoinverse solutions.
-
 ---
 
 #  Forward Operators Used
@@ -406,76 +395,43 @@ After inserting the API key into the MATLAB script, run the main experiment file
 report.mlx
 
 
+# Reconstruction Results
+
+## Signal Reconstruction Example - Sinusodial Wave
+![alt text](image.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-1.png)
+
+## Image Reconstruction Example
+
+![alt text](image-2.png)
+
+These results show how regularization significantly improves reconstruction quality compared to naive pseudoinverse solutions.
+
 
 # 📁 Repository Structure
-
 ```
 C7_MFC4_Inverse_Problem_Regularization/
 ├── .gitignore
 ├── Base_Paper.pdf
-├── Matlab_Codes_Images/
-│   ├── 296059.jpg
-│   ├── llm_image_reg_methods.mlx
-│   ├── sample_forward_operator.mlx
-│   ├── sample_reg_methods_all.mlx
-│   ├── sample_tank.mlx
-│   ├── sample_toy.mlx
-│   ├── toy.png
-│   └── toy16x16.png
-├── Matlab_Codes_Signals/
-│   ├── Condition_number.mlx
-│   ├── Evaluation_Metrics.mlx
-│   ├── Forward_Models.mlx
-│   ├── Noise_Models.mlx
-│   ├── Reconstruction_Methods.mlx
-│   └── Signal_Generation.mlx
 ├── README.md
 ├── Report.mlx
 ├── Report.pdf
-├── Signals/
-│   ├── Papers/
-│   │   ├── An_Adaptive_Regularized_Solution_to_Inverse_Ill-Posed_Models.pdf
-│   │   ├── Base_Paper.pdf
-│   │   ├── NeurIPS-2021-learning-the-optimal-tikhonov-regularizer-for-inverse-problems-Paper (1).pdf
-│   │   └── s00366-019-00920-z (2).pdf
-│   ├── diagnostics/
-│   │   ├── condition_number.py
-│   │   ├── l_curve.py
-│   │   ├── picard_plot.py
-│   │   └── svd_analysis.py
-│   ├── notebooks/
-│   │   ├── 1_pseudoinverse_baseline.ipynb
-│   │   ├── 2_regularization_comparison.ipynb
-│   │   ├── 3_multimethod_evaluation.ipynb
-│   │   ├── 4_noise_sensitivity.ipynb
-│   │   ├── 5_nsit_advanced_comparison.ipynb
-│   │   ├── 6_fnsit_toy_example.ipynb
-│   │   ├── 9_simplified_llm_comparison.ipynb
-│   │   └── README.md
-│   └── src/
-│       ├── evaluation/
-│       │   ├── comparison.py
-│       │   └── error_metrics.py
-│       ├── forward_models/
-│       │   ├── blur_operator.py
-│       │   ├── downsample_operator.py
-│       │   └── rank_deficient_operator.py
-│       ├── noise_models/
-│       │   └── noise.py
-│       ├── reconstruction/
-│       │   ├── fnsit.py
-│       │   ├── nsit.py
-│       │   ├── pseudoinverse.py
-│       │   ├── spectral_filters.py
-│       │   ├── tikhonov.py
-│       │   └── tsvd.py
-│       └── signal_generation/
-│           └── generate_signals.py
 ├── analyze_notebook.py
+├── architecture_diagram.png
 ├── final/
 │   ├── create_gaussian_kernel.mlx
 │   ├── image_reconstruction.asv
 │   └── image_reconstruction.mlx
+├── final_results/
+│   ├── image-1.png
+│   ├── image-2.png
+│   └── image.png
+├── finalreview_ppt.pdf
+├── image-1.png
+├── image-2.png
+├── image-3.png
 ├── image.png
 ├── images/
 │   ├── 291000.jpg
@@ -493,10 +449,64 @@ C7_MFC4_Inverse_Problem_Regularization/
 │   ├── toy16x16.png
 │   └── tsvd.ipynb
 ├── requirements.txt
-└── review-1.pdf
-└── finalreview_ppt.pdf
+├── review_1_Matlab/
+│   ├── Matlab_Codes_Images/
+│   │   ├── 296059.jpg
+│   │   ├── llm_image_reg_methods.mlx
+│   │   ├── sample_forward_operator.mlx
+│   │   ├── sample_reg_methods_all.mlx
+│   │   ├── sample_tank.mlx
+│   │   ├── sample_toy.mlx
+│   │   ├── toy.png
+│   │   └── toy16x16.png
+│   ├── Matlab_Codes_Signals/
+│   │   ├── Condition_number.mlx
+│   │   ├── Evaluation_Metrics.mlx
+│   │   ├── Forward_Models.mlx
+│   │   ├── Noise_Models.mlx
+│   │   ├── Reconstruction_Methods.mlx
+│   │   └── Signal_Generation.mlx
+│   └── Signals/
+│       ├── Papers/
+│       │   ├── An_Adaptive_Regularized_Solution_to_Inverse_Ill-Posed_Models.pdf
+│       │   ├── Base_Paper.pdf
+│       │   ├── NeurIPS-2021-learning-the-optimal-tikhonov-regularizer-for-inverse-problems-Paper (1).pdf
+│       │   └── s00366-019-00920-z (2).pdf
+│       ├── diagnostics/
+│       │   ├── condition_number.py
+│       │   ├── l_curve.py
+│       │   ├── picard_plot.py
+│       │   └── svd_analysis.py
+│       ├── notebooks/
+│       │   ├── 1_pseudoinverse_baseline.ipynb
+│       │   ├── 2_regularization_comparison.ipynb
+│       │   ├── 3_multimethod_evaluation.ipynb
+│       │   ├── 4_noise_sensitivity.ipynb
+│       │   ├── 5_nsit_advanced_comparison.ipynb
+│       │   ├── 6_fnsit_toy_example.ipynb
+│       │   ├── 9_simplified_llm_comparison.ipynb
+│       │   └── README.md
+│       └── src/
+│           ├── evaluation/
+│           │   ├── comparison.py
+│           │   └── error_metrics.py
+│           ├── forward_models/
+│           │   ├── blur_operator.py
+│           │   ├── downsample_operator.py
+│           │   └── rank_deficient_operator.py
+│           ├── noise_models/
+│           │   └── noise.py
+│           ├── reconstruction/
+│           │   ├── fnsit.py
+│           │   ├── nsit.py
+│           │   ├── pseudoinverse.py
+│           │   ├── spectral_filters.py
+│           │   ├── tikhonov.py
+│           │   └── tsvd.py
+│           └── signal_generation/
+│               └── generate_signals.py
+└── review_1_ppt.pdf
 ```
-
 
 # Reference Papers
 
