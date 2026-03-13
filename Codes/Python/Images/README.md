@@ -11,6 +11,8 @@ This project explores why naive solutions (pseudoinverse) fail for ill-posed inv
 - **tikhonov.ipynb**: Tikhonov regularization with parameter selection
 - **tsvd.ipynb**: Truncated Singular Value Decomposition (TSVD)
 - **nsit_morozpv.ipynb**: Nested Semi-Iterative Tikhonov (NSIT) with Morozov discrepancy principle
+- **fnsit.ipynb**: Fast Nested Semi-Iterative Tikhonov (NSIT) with Morozov discrepancy principle
+- **llm_image_regularization.ipynb**: Uses LLMguidance to get regularization parameters.
 
 ## Problem Formulation
 
@@ -54,7 +56,12 @@ Combines:
 
 where `δ` is the noise level and `τ ≈ 1.05` is a safety factor.
 
-## Key Findings
+### 4. Fast Nested Semi-Iterative Tikhonov (FNSIT) + Morozov
+Faster than NSIT reconstruction
+
+### 6. LLM Guided Regularization Parameters
+Uses Gemini API Key to get regularization parameters from LLM.
+## Key Findings 
 
 - **Ill-posedness**: Small singular values cause noise amplification
 - **Regularization**: Essential to stabilize solutions
@@ -94,6 +101,8 @@ images/
       ├── tikhonov.ipynb            # Tikhonov regularization
       ├── tsvd.ipynb                # Truncated SVD
       ├── nsit_morozpv.ipynb        # NSIT + Morozov discrepancy
+      ├── fnsi.ipynb                # FNSIT Reconstruction
+      ├── llm_image_reconstruction.ipynb  # LLM-Guided Regularization Parameters
       └──── 296059.jpg            # Test image
 ```
 
