@@ -1,3 +1,5 @@
+<img src="Amrita.png" alt="Logo" width="100%" style="max-width: 600px; height: auto;">
+
 # Inverse Problem Regularization for Signal Reconstruction With LLM assistance in Paramater Selection
 # Table of Contents
 
