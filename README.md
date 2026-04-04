@@ -1,5 +1,33 @@
 # Inverse Problem Regularization for Signal Reconstruction With LLM assistance in Paramater Selection
+# Table of Contents
 
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Mathematical Background](#mathematical-background)
+
+- [Methods Implemented](#methods-implemented)
+  - [Pseudoinverse Reconstruction](#1️⃣-pseudoinverse-reconstruction)
+  - [Tikhonov Regularization](#2️⃣-tikhonov-regularization)
+  - [Truncated SVD (TSVD)](#3️⃣-truncated-svd-tsvd)
+  - [NSIT (Non-Stationary Iterated Tikhonov)](#4️⃣-nsit-non-stationary-iterated-tikhonov)
+  - [FNSIT (Fast Non-Stationary Iterated Tikhonov)](#5️⃣-fnsit-fast-non-stationary-iterated-tikhonov)
+  - [LLM-Guided Parameter Selection](#6️⃣-llm-guided-parameter-selection)
+
+- [System Architecture](#system-architecture)
+- [Reconstruction Pipeline](#reconstruction-pipeline)
+- [Forward Operators Used](#forward-operators-used)
+
+- [LLM Parameter Selection (Gemini API)](#llm-parameter-selection-gemini-api)
+  - [How to Get a Gemini API Key](#how-to-get-a-gemini-api-key)
+
+- [Reconstruction Results](#reconstruction-results)
+  - [Signal Reconstruction Example - Sinusodial Wave](#signal-reconstruction-example---sinusodial-wave)
+  - [Image Reconstruction Example](#image-reconstruction-example)
+
+- [Repository Structure](#-repository-structure)
+- [Reference Papers](#reference-papers)
+- [Future Work](#future-work)
+- [Conclusion](#conclusion)
 ## Course
 **22MAT230 – Mathematics for Computing IV**  
 Amrita Vishwa Vidyapeetham, Coimbatore
